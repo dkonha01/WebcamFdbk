@@ -68,7 +68,6 @@ function noStream(e)
 		 }
 	</script>
 
-
 	<script>
 		var scene;
 		var camera;
@@ -82,15 +81,10 @@ function noStream(e)
 		var bufferObject;
 		var finalMaterial;
 		var quad;
-        var video;
-        var videoTexture;
-
-        var videoCanvas = document.getElementById( 'videoCanvas' );
-
-        var videoContext = videoCanvas.getContext( '2d' );
-
-        //////
-
+    var video;
+    var videoTexture;
+    var videoCanvas = document.getElementById( 'videoCanvas' );
+    var videoContext = videoCanvas.getContext( '2d' );
 
 		function sceneSetup(){
 
@@ -145,8 +139,6 @@ function noStream(e)
 			bufferObject = new THREE.Mesh( plane, bufferMaterial );
 			bufferScene.add(bufferObject);
 
-
-
 			//Draw textureB to screen
 			finalMaterial =  new THREE.MeshBasicMaterial({map: textureB});
 			quad = new THREE.Mesh( plane, finalMaterial );
@@ -184,7 +176,6 @@ function noStream(e)
 		  renderer.render( scene, camera );
 
 		  videoContext.drawImage( video, 0, 0, videoCanvas.width, videoCanvas.height );
-
 
 		}
 
